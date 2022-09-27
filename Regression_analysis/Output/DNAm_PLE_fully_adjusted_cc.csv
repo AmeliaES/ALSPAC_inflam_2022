@@ -1,0 +1,5 @@
+"Exposure","Outcome","Covariates","Sample_Size","Standardised Beta","CI_lower","CI_upper","SE","P-value","Significant_covariates"
+"DNAm IL-6 score (birth)","PEs","Fully Adjusted (with cell estimates)",831,-0.017707625450978,-0.285450999543054,0.247706350371563,0.139573015215166,0.899043308217474,"Sex1"
+"DNAm CRP score (birth)","PEs","Fully Adjusted (with cell estimates)",831,0.226499625784578,0.00754732625647606,0.448679717075455,0.112481886006487,0.0440458483400073,"Sex1"
+"DNAm IL-6 score (7 years)","PEs","Fully Adjusted (with cell estimates)",828,-0.0746205833223659,-0.386478613726076,0.235434061706277,0.156577320413447,0.633665940612689,"Sex1"
+"DNAm CRP score (7 years)","PEs","Fully Adjusted (with cell estimates)",828,0.239909849882661,0.0181001043721599,0.465378701800561,0.114637081119783,0.0363690634248897,"Sex1"

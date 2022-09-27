@@ -1,0 +1,3 @@
+"Exposure","Outcome","Covariates","Sample_Size","Standardised Beta","CI_lower","CI_upper","SE","P-value","Significant_covariates"
+"log(IL-6)","PEs","Fully Adjusted",4183,0.0906686220628725,0.00313912699595768,0.178120126130181,0.0438367156233803,0.0386093712281194,"Sex1"
+"log(CRP)","PEs","Fully Adjusted",4193,0.0183855324997931,-0.074864245513315,0.11060476075564,0.0476964606979405,0.699889573868321,"Sex1"

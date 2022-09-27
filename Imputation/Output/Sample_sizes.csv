@@ -1,0 +1,9 @@
+Exposure,Depression (Base),Depression (Fully Adjusted),PLE (Base),PLE (Fully Adjusted),Missing Imputed
+log(IL-6),4835,4264,4732,4183,5009
+log(CRP),4845,4274,4742,4193,5019
+DNAm IL-6 score (birth),870,829,872,831,877
+DNAm CRP score (birth),870,829,872,831,877
+DNAm IL-6 score (7 years),870,826,872,828,877
+DNAm CRP score (7 years),870,826,872,828,877
+CRP PRS (SBayesR),6372,5659,6401,5699,7862
+IL-6 PRS (SBayesR),6372,5659,6401,5699,7862

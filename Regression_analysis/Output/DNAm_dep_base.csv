@@ -1,0 +1,5 @@
+"Exposure","Outcome","Covariates","Sample_Size","Standardised Beta","CI_lower","CI_upper","SE","P-value","Significant_covariates"
+"DNAm IL-6 score (birth)","Depression episodes","Base Model",870,-0.0540535982938677,-0.159916545507329,0.0514822822144836,0.0529296688084709,0.307143400382601,"Sex1"
+"DNAm CRP score (birth)","Depression episodes","Base Model",870,0.0701931755507327,-0.0354993878385716,0.176216616405962,0.053126067720544,0.186415769849764,"Sex1"
+"DNAm IL-6 score (7 years)","Depression episodes","Base Model",870,0.0150503454502843,-0.0950928631650758,0.125313418240446,0.0553132393979268,0.785550508943792,"Sex1"
+"DNAm CRP score (7 years)","Depression episodes","Base Model",870,0.0791324884702558,-0.0255747164666756,0.184251155753971,0.0537320665536386,0.140825550297809,"Sex1"

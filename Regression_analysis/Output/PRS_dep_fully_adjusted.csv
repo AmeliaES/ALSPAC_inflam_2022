@@ -1,0 +1,3 @@
+"Exposure","Outcome","Covariates","Sample_Size","Standardised Beta","CI_lower","CI_upper","SE","P-value","Significant_covariates"
+"CRP PRS (SBayesR)","Depression episodes","Fully Adjusted",5659,0.00890330719461825,-0.0349514540609386,0.0527738919821586,0.0223169182857799,0.689930949572476,"Sex1; pc1; pc3; Maternal.education.at.birth1"
+"IL-6 PRS (SBayesR)","Depression episodes","Fully Adjusted",5659,0.00747482694760936,-0.0367902893884946,0.0517458172817069,0.0224643087447541,0.73932877649518,"Sex1; pc1; pc3; Maternal.education.at.birth1"
