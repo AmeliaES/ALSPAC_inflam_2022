@@ -137,19 +137,19 @@ dataSub <- dataSmfq %>%
 # ----------
 # Participant sex : female = 1, male = 0
 dataSubQC <- dataSub %>%
-  mutate(Infection_present = recode(Infection_present, `1` = "1", `2` = "2" )) %>%
-  mutate(`Sex` = recode(`Sex`,
+  mutate(Infection_present = dplyr::recode(Infection_present, `1` = "1", `2` = "2" )) %>%
+  mutate(`Sex` = dplyr::recode(`Sex`,
                                     `2`="1",
                                     `1`="0")) %>%
 # Binary way of coding Maternal education: 0 = CSE/Olevel/Vocational 1=Alevel/Degree
-  mutate(`Maternal education at birth` = recode(`Maternal education at birth`,
+  mutate(`Maternal education at birth` = dplyr::recode(`Maternal education at birth`,
                                                 `5`="1",
                                                 `4`="1",
                                                 `3`="0",
                                                 `2`="0",
                                                 `1`="0")) %>%
 # Maternal social class at birth: 0 = I, II; 1 = III (non-manual), III (manual), IV, V. 
-  mutate(`Maternal social class at birth` = recode(`Maternal social class at birth`,
+  mutate(`Maternal social class at birth` = dplyr::recode(`Maternal social class at birth`,
                                                    `6`="1",
                                                    `5`="1",
                                                    `4`="1",
@@ -157,7 +157,7 @@ dataSubQC <- dataSub %>%
                                                    `2`="0",
                                                    `1`="0")) %>%
 # Ethnicity: (0 = "white" 1 = "non-white")
-  mutate(`Ethnicity` = recode(`Ethnicity`,
+  mutate(`Ethnicity` = dplyr::recode(`Ethnicity`,
                               `1`="0",
                               `2`="1")) %>%
 # CRP
@@ -209,7 +209,7 @@ dataSubQC <- dataSub %>%
   # Other psychotic related phenotypes:
   mutate(`PSYCH_12_definite` = replace(`PSYCH_12_definite`, which(`PSYCH_12_definite` < 0), NA)) %>%
   mutate(`PSYCH_18_definite` = replace(`PSYCH_18_definite`, which(`PSYCH_18_definite` < 0), NA)) %>%
-  mutate(`PSYCH_18_definite` = recode(`PSYCH_18_definite`, `1`= "0", `2`="1")) %>%
+  mutate(`PSYCH_18_definite` = dplyr::recode(`PSYCH_18_definite`, `1`= "0", `2`="1")) %>%
   mutate(`PSYCH_24_definite` = replace(`PSYCH_24_definite`, which(`PSYCH_24_definite` < 0), NA)) %>%
   mutate(`PSYCH_24_disorder` = replace(`PSYCH_24_disorder`, which(`PSYCH_24_disorder` < 0), NA)) %>%
   # Other auxiliary variables:
@@ -222,7 +222,7 @@ dataSubQC <- dataSub %>%
   mutate(`DV_any_anxiety_7` = replace(`DV_any_anxiety_7`, which(`DV_any_anxiety_7` < 0), NA)) %>%
   mutate(`DV_MDD_7` = replace(`DV_MDD_7`, which(`DV_MDD_7` < 0), NA)) %>%
   mutate(`DV_anxiety_dis_10` = replace(`DV_anxiety_dis_10`, which(`DV_anxiety_dis_10` < 0), NA)) %>%
-  mutate(`ever_depression_diagnosis_22` = recode(`ever_depression_diagnosis_22`,
+  mutate(`ever_depression_diagnosis_22` = dplyr::recode(`ever_depression_diagnosis_22`,
                                                                         `3`="0",
                                                                         `4`="0",
                                                                         `1`="1",
@@ -230,7 +230,7 @@ dataSubQC <- dataSub %>%
   mutate(`WEMWBS_23` = replace(`WEMWBS_23`, which(`WEMWBS_23` < 0), NA)) %>%
   mutate(`WEMWBS_23` = replace(`WEMWBS_23`, which(`WEMWBS_23` <= 40 & `WEMWBS_23` > 0), 0)) %>%
   mutate(`WEMWBS_23` = replace(`WEMWBS_23`, which(`WEMWBS_23` >= 40), 1)) %>%
-  mutate(`WEMWBS_23` = recode(`WEMWBS_23`,`0`="0", `1`="1")) %>%
+  mutate(`WEMWBS_23` = dplyr::recode(`WEMWBS_23`,`0`="0", `1`="1")) %>%
   mutate(`dep_bin_17` = replace(`dep_bin_17`, which(`dep_bin_17` < 0), NA)) %>%
   mutate(`mild_dep_dis_24` = replace(`mild_dep_dis_24`, which(`mild_dep_dis_24` < 0), NA)) %>%
   mutate(`IMD_score` = replace(`IMD_score`, which(`IMD_score` < 0), NA)) %>%
@@ -239,10 +239,10 @@ dataSubQC <- dataSub %>%
   mutate(BMI_age12 = weight_kg_12/((height_cm_12)/100)^2 ) %>%
   mutate(`maternal_EDPS` = replace(`maternal_EDPS`, which(`maternal_EDPS` >= 0 & `maternal_EDPS` <= 12), 0)) %>%
   mutate(`maternal_EDPS` = replace(`maternal_EDPS`, which(`maternal_EDPS` >= 13), 1)) %>%
-  mutate(`maternal_EDPS` = recode(`maternal_EDPS`, `0`="0", `1`="1")) %>%
+  mutate(`maternal_EDPS` = dplyr::recode(`maternal_EDPS`, `0`="0", `1`="1")) %>%
   mutate(`paternal_EDPS` = replace(`paternal_EDPS`, which(`paternal_EDPS` >= 0 & `paternal_EDPS` <= 12), 0)) %>%
   mutate(`paternal_EDPS` = replace(`paternal_EDPS`, which(`paternal_EDPS` >= 13), 1)) %>%
-  mutate(`paternal_EDPS` = recode(`paternal_EDPS`, `0`="0", `1`="1"))
+  mutate(`paternal_EDPS` = dplyr::recode(`paternal_EDPS`, `0`="0", `1`="1"))
   
 # Check ages look sensible:
 sapply(c("age_t01", "age_t02", "age_t03", "age_t04", "age_t05",

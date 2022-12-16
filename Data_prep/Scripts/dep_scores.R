@@ -38,11 +38,11 @@ lapply(list(mfq_t1Vars, mfq_t2Vars, mfq_t3Vars, mfq_t4Vars, mfq_t5Vars,
 # Calculate smfq scores:
 smfq <- lapply(mfqAllVars, function(varsList){
   SMFQ <- data %>%
-    mutate_at(vars(varsList), funs(recode(., `3`="0",
+    mutate_at(vars(varsList), funs(dplyr::recode(., `3`="0",
                                           `2`="1",
                                           `1`="2"))) %>%
     mutate_at(vars(varsList), funs(as.numeric(.))) %>%
-    dplyr::select( varsList ) %>%
+    dplyr::select( all_of(varsList) ) %>%
     dplyr::mutate(sum = rowSums(across(where(is.numeric)))) %>%
     dplyr::select(sum) 
   return(SMFQ)
