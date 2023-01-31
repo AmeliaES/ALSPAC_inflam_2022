@@ -163,7 +163,7 @@ PleStats <- lapply(1:length(timePoint), function(i){
 })
 PleStats <- do.call(rbind, PleStats)
 colnames(PleStats) <- c("Occasion", "Sample Size", "PE", "No PE", "% PE", "n missing")
-PleStats$Acquisition <- ifelse(PleStats$Occasion %in% c(2, 6, 8), "Clinic", "Self-report")
+PleStats$Acquisition <- ifelse(PleStats$Occasion %in% c(3, 8, 13), "Clinic", "Self-report")
 PleStats
 write.csv(PleStats, "Output/PLE_Descriptive_Statistics.csv", row.names = F)
 

@@ -63,27 +63,25 @@ dataVars <- c("Subject" = "Subject", # Unique pregnancy identifier for Heather W
               # age at appointments for 7 and 9 years:
                "age_F07" = "f7003c",
                "age_F09" = "f9003c",
-               # age at attendance (months):
-               "age_t01" = "fd003c", # depression only
-               "age_t02" = "ff0011a",# PLE and depression (age 12)
-               "age_t03" = "fg0011a",# depression only
-               "age_t04"= "ccs9991a",# depression and PLE (age 16)
-               "age_t05"= "CCXD006",# depression and PLE (age 17/18)
-               "age_t06" = "cct9991a",# depression only
-               "age_t07" = "YPA9020",# depression and PLE (age 21)
-               "age_t08" = "YPB9992",# depression only
-               "age_t09" = "YPC2650",# depression only
-               "age_t10" = "YPE9660",# depression only
-               "age_t11" = "covid4yp_9650", # age in years
-               # ages for PLE only time points:
-               "PLE_11" = "cck991a", # age 11
-               "PLE_13" = "ccn991a", # age 13
-               "PLE_14" = "ccr991a", # age 14
-               "PLE_18" = "FJ003a", # age 18 (F17)
-               "PLE_24" = "FKAR0010", # age 24
-               "PLE_26" = "YPF9520", # age 26
-              # Other psychotic like phenotypes:
-              "PSYCH_12_definite" = "ff5262",
+              # age at attendance (months):                          Appointment Time Point
+              "age_t01" = "fd003c", # depression only                  1
+              "PLE_11" = "cck991a", # age 11                           2
+              "age_t02" = "ff0011a",# PLE and depression (age 12)      3     PLE Clinic
+              "PLE_13" = "ccn991a", # age 13                           4
+              "age_t03" = "fg0011a",# depression only                  5
+              "PLE_14" = "ccr991a", # age 14                           6
+              "age_t04"= "ccs9991a",# depression and PLE (age 16)      7
+              "age_t05"= "CCXD006",# depression and PLE (age 17/18)    8     PLE Clinic
+              "age_t06" = "cct9991a",# depression only                 9
+              "age_t07" = "YPA9020",# depression and PLE (age 21)      10
+              "age_t08" = "YPB9992",# depression only                  11
+              "age_t09" = "YPC2650",# depression only                  12
+              "PLE_24" = "FKAR0010", # age 24                          13    PLE Clinic
+              "age_t10" = "YPE9660",# depression only                  14
+              "PLE_26" = "YPF9520", # age 26                           15
+              "age_t11" = "covid4yp_9650", # age in years              16
+              "PLE_18" = "FJ003a", # age 18 (F17)
+              # Other psychotic like phenotypes:              "PSYCH_12_definite" = "ff5262",
                "PSYCH_24_definite" = "FKPL2010", 
               "PSYCH_24_disorder" = "FKPL2240",
                 "PSYCH_18_definite" = "FJPL162",
